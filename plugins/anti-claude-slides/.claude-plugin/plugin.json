@@ -1,7 +1,7 @@
 {
   "name": "anti-claude-slides",
   "displayName": "Anti-Claude Slides",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Build dense, bounded-cell fact-card slides — institutional, flat, Montserrat on ivory, navy/gray/teal/gold — under a strict hard-rule spec. Generate or review slides and decks as self-contained 1280x720 HTML. No templates: every slide is composed fresh from tokens + primitives, gated by a checklist.",
   "author": {
     "name": "shbot",

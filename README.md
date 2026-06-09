@@ -6,8 +6,9 @@ no shadows, no gradients, no marketing slop. It **generates** slides from your c
 existing slides, for any topic, as self-contained **1280×720 HTML**.
 
 It is governed by a **strict hard-rule spec** (typography, density, one-signal color, flatness,
-anchor-or-cut credibility, layered reading). There are **deliberately no template slides** — every slide
-is composed *fresh* from a tokens file + flat primitives, then gated by an audit checklist. That's the
+anchor-or-cut credibility, layered reading). There are **deliberately no template slides** — with a single
+exception, the deck **cover** (a title slide, not a fact-card) — every slide is composed *fresh* from a
+tokens file + flat primitives, then gated by an audit checklist. That's the
 "anti-Claude" part: restrained and anchored, never generic AI deck output.
 
 ## What it enforces (the short version)
@@ -18,11 +19,15 @@ is composed *fresh* from a tokens file + flat primitives, then gated by an audit
   `#A9853F` = caveat/link/rule/tag only; no red/amber/green.
 - **Flat:** ivory `#FAFBFC` ground (never pure white), square corners, hairline/fill edges, no rule under the title.
 - **Credibility:** every value anchored to a date / named authority / cited document; one quiet `Source:` foot.
+- **Cover:** the one sanctioned template — a title-slide cover (`assets/cover.html`) with a navy/light
+  title, a date, and a side image; a flat **navy** panel is the fallback when no image is provided.
 
 Full rules live in [`SKILL.md`](plugins/anti-claude-slides/skills/Anti-claude-slides-skill-1/SKILL.md);
 the audit gate is [`checklist.md`](plugins/anti-claude-slides/skills/Anti-claude-slides-skill-1/checklist.md);
 the palette + sizes + primitives are in
-[`assets/tokens.css`](plugins/anti-claude-slides/skills/Anti-claude-slides-skill-1/assets/tokens.css).
+[`assets/tokens.css`](plugins/anti-claude-slides/skills/Anti-claude-slides-skill-1/assets/tokens.css);
+the deck **cover** template is
+[`assets/cover.html`](plugins/anti-claude-slides/skills/Anti-claude-slides-skill-1/assets/cover.html).
 
 ## Install
 

@@ -14,12 +14,16 @@ This skill ships **zero template / starter slides on purpose.** Do NOT look for 
 re-fill a previous slide. Build each slide **fresh** from the tokens + flat primitives in
 `assets/tokens.css`, arranged to fit the slide's job, and gated by `checklist.md`. (This is also what
 keeps the output from looking generated/same-y — no demo residue, no copy-paste sameness.)
+**One deliberate exception:** the deck **cover** (`assets/cover.html`) — a cover is a title slide, not a
+fact-card — see **THE COVER** below. Every *content* slide still has no starter, ever.
 
 ## What you start from
 - `assets/tokens.css` — the exact palette + sizes + flat primitive building blocks (a band, a chip, a
   rail field, a metric, a source foot…). **Inline it** into every delivered slide. These are ELEMENTS,
   not layouts. You assemble the layout.
 - `checklist.md` — the audit gate. Run it on every slide before delivering, and as the rubric in review.
+- `assets/cover.html` — the **one** sanctioned starter slide: a deck **cover** (see **THE COVER** below).
+  The ONLY file you copy from; every *content* slide is still composed fresh from primitives (Rule 0).
 
 ---
 
@@ -75,7 +79,8 @@ tracking, or color-for-emphasis (**bold weight does emphasis**).
 - Stay **flat**: ivory ground, square corners, hairlines/fills for edges.
 
 **DON'T**
-- Don't add shadows, gradients, glows, photos, rounded marketing pills, icon rainbows, 3D.
+- Don't add shadows, gradients, glows, photos (except the deck **cover's** one bounded image — see
+  **THE COVER**), rounded marketing pills, icon rainbows, 3D.
 - Don't use **pure white `#FFFFFF`**, or **a rule beneath the title**.
 - Don't put a metric number on a colored chip or above title size (that's a KPI dashboard).
 
@@ -104,7 +109,49 @@ tracking, or color-for-emphasis (**bold weight does emphasis**).
 
 ---
 
+# THE COVER — the ONE sanctioned exception to Rule 0
+A deck needs a title slide, and a cover is **not** a fact-card. The cover is the **single** reusable
+template this skill ships: **`assets/cover.html`**. It is the **only** slide you start from a file.
+**Swap three slots only — title, date, image — and leave everything else.** Never copy this layout into
+a content slide, and never add a second "template."
+
+**Structure (locked):** a left ivory text column (title + date) and a right **full-bleed** image column,
+bounded top and bottom by the **gold 2px accent rule**. ~55% text / ~45% image.
+
+**Exempt on the cover ONLY (nowhere else):**
+- **Rule 0** — the cover *is* the one reusable starter.
+- **Fact-card density / fill-the-frame / no-dead-space** — a cover is deliberately airy; the left column
+  breathes. Do **not** "fill" it with fact-card cells.
+- **The no-photo clause of Flatness** — the cover carries **one** bounded photo (the right column).
+- **Bounded-cell structure / right rail / `Source:` foot** — a cover has none of these.
+
+**Still binding on the cover (do NOT bend):**
+- **Montserrat only.** Ivory ground `#FAFBFC` on the text column — **never pure `#FFFFFF`**.
+- **Title:** navy/ink, **light (300)**, **left-aligned**, sentence/entity case, **at the title size** —
+  **not enlarged, not centered, not recolored** (no gold title, no 4th size, **no rule beneath it**).
+- **Gold = the 2px accent rule only** — it appears solely as the two frame bars. **Nothing else is gold.**
+- **Square corners**; no shadow / gradient / glow / rounded card on the chrome.
+- **Date** is one quiet gray label, **honestly anchored** (a real date — no "TBD," no placeholder month).
+- **One slide, one job:** a cover names the deck. No bullets, no agenda, no second subject.
+
+**Image — sourcing process (simple; never auto-fabricate filler):**
+1. **Ask the user for an image.** If they provide one (path or URL), embed it **raw** (no filter),
+   framed by the gold bars.
+2. **If none is provided → the navy fallback.** Leave the image column as a flat **`--navy`** panel
+   (still bounded by the two gold bars) — a clean, simple cover, fully within the core Flatness rule.
+3. **Online search or AI-generation happen ONLY if the user explicitly asks** — and stay subject to brand
+   guardrails (license-safe, text/logo-free, no recognizable real public figure).
+
+The template ships in the **navy-fallback** state; supplying an image is a one-line swap — uncomment the
+`<img>` in `.cover-media` and set its `src` (base64-embed it for a self-contained file). The shipped
+`cover-sample.jpg` is just an example you can point that `<img>` at. Audit with **§7** of `checklist.md`
+(not §0/§2's density gates).
+
+---
+
 # MODE A — Generate
+*(Need a **cover**? Start from `assets/cover.html` per **THE COVER** — swap title/date/image, audit with
+§7. The steps below are for **content** slides, composed fresh.)*
 1. **Name the job in one sentence:** "a scanner must walk away knowing ___." One slide, one job. If it
    answers two questions, it's two slides.
 2. **Pick the fact-card arrangement that fits the job** (profile / compare / metrics / status / timeline
