@@ -1,0 +1,14 @@
+{
+  "name": "shbot-skills",
+  "owner": {
+    "name": "shbot",
+    "email": "shbot13@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "anti-claude-slides",
+      "source": "./plugins/anti-claude-slides",
+      "description": "Dense bounded-cell fact-card slides under a strict hard-rule spec — generate or review as self-contained 1280x720 HTML. Montserrat on ivory; navy/gray/teal/gold; flat. No templates; composed fresh, gated by a checklist."
+    }
+  ]
+}
