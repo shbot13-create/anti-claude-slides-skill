@@ -16,8 +16,11 @@ tokens file + flat primitives, then gated by an audit checklist. That's the
   11px); light title, bold-weight emphasis (never color), metric numbers ≤ title size and never on a chip.
 - **Header = one title:** a single title element only (it may wrap to a second line) — no subtitle, no
   definer, no eyebrow kicker; framing/scope info lives in content cells.
-- **Icons:** sparing **monochrome Lucide stroke icons** on content slides only — beside the label they
-  reinforce, ≤ 1 per region and ≤ 6 per slide, colored by their cell's signal; **zero icons on the cover**.
+- **Icons:** every content slide carries **2–4 monochrome Lucide stroke icons** — beside the label they
+  reinforce, ≤ 1 per region and ≤ 6 per slide, legible at a glance, colored by their cell's signal;
+  **zero icons on the cover**.
+- **Fewest slides possible:** decks are as short as the content allows — one slide per distinct job,
+  jobs merged when one fact-card carries them; no agenda / divider / recap / thank-you filler.
 - **Density:** every slide a dense fact-card grid that fills the frame — no dead space, nothing overflowing 1280×720.
 - **Color = one meaning:** teal `#2F8F86` = active/best/positive only (≤1 per comparison axis); gold
   `#A9853F` = caveat/link/rule/tag only; no red/amber/green.

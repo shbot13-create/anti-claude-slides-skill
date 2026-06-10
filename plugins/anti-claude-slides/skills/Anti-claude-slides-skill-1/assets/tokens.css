@@ -39,7 +39,7 @@
    teal=ACTIVE (current/selected/best/positive — the ONLY saturated good)
    gold=caveat/link/2px accent rule/scope tag (never active, never decoration)
    bold=skim spine · ALL-CAPS=labels & tags only · italic=cited document titles
-   icons=monochrome currentColor beside labels (<=1/region, <=6/slide, NEVER the cover)
+   icons=monochrome currentColor beside labels (2-4 per content slide, <=1/region, <=6/slide, NEVER the cover)
    Emphasis = BOLD WEIGHT in the same ink — NEVER color-for-emphasis. */
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -104,10 +104,12 @@ i,em,cite{font-style:italic}              /* italic = cited document titles only
    Monochrome via currentColor: an icon inherits its cell's text color, so it obeys the signal system
    automatically (gray in a keystrip, white on a navy chip; teal/gold ONLY when the cell itself carries
    that signal). Always beside the text label it reinforces — never a replacement for words, never
-   floating decoration. Cap: <=1 per labeled region, <=6 per slide; same concept = same icon deck-wide.
+   floating decoration. Every content slide carries 2-4 (>=1 always; <=1 per labeled region, <=6 per
+   slide); same concept = same icon deck-wide. SIZED TO BE SEEN: ~1.4em (~17px beside a 12px label) —
+   if the render shows specks, the icons are too small.
    Embed: <script src="https://unpkg.com/lucide@latest"></script> + lucide.createIcons() at end of <body>;
    write <i data-lucide="name" class="icon"></i>. Verify every name RENDERED in the screenshot. ---- */
-.icon{width:1.25em;height:1.25em;stroke-width:2;vertical-align:-.25em;flex:none}
+.icon{width:1.4em;height:1.4em;stroke-width:2;vertical-align:-.3em;flex:none}
 
 /* ---- scope / caveat tag (gold, UPPERCASE). "AT RISK" is a gold tag — never a red fill. ---- */
 .tag{color:var(--gold);font-size:var(--fs-label);font-weight:600;

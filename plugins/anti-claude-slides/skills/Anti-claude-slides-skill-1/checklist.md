@@ -65,6 +65,8 @@ citing the rule. These map 1:1 to the hard rules in `SKILL.md`. No exceptions, n
 ## 6. Reading & scope
 - [ ] Works at three speeds: **title → bold-only skim → full detail**; every region labeled.
 - [ ] **One slide, one job** (not two subjects/arguments — else split it).
+- [ ] **Deck at minimum length** — every slide has a distinct job; no agenda / section-divider / quote /
+      recap / thank-you filler; no two slides whose jobs one dense fact-card could carry.
 - [ ] Reading order supports random access; the bold spine alone reconstructs the gist.
 
 ## 7. Icons (slight & functional — content slides ONLY; see SKILL.md **Icons**)
@@ -75,8 +77,10 @@ citing the rule. These map 1:1 to the hard rules in `SKILL.md`. No exceptions, n
       itself carries that signal. No multicolor/filled blobs, no emoji, no second icon set.
 - [ ] Every icon sits **beside the text label it reinforces** — none floats as decoration, none replaces
       words, none parked in a corner.
-- [ ] **≤ 1 icon per labeled region, ≤ 6 per slide**; same concept = same icon deck-wide; no two icons
-      for one concept.
+- [ ] **Icons present: typically 2–4 on this content slide** (≥ 1 always); **≤ 1 per labeled region,
+      ≤ 6 per slide**; same concept = same icon deck-wide; no two icons for one concept.
+- [ ] **Icons legible at a glance** in the render (~17px beside a 12px label via `.icon`) — no specks
+      you must hunt for.
 
 ## 8. Cover slide (apply ONLY to the deck cover — see SKILL.md **THE COVER**)
 - [ ] Started from **`assets/cover.html`**; only the **title, date, and image** slots were changed.

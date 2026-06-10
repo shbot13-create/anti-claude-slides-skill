@@ -1,6 +1,6 @@
 ---
 name: Anti-claude-slides-skill-1
-description: Build dense, bounded-cell fact-card slides — institutional, credible, flat, Montserrat on ivory, navy/gray/teal/gold, single-title headers (no subtitles), sparing monochrome Lucide icons — following a STRICT hard-rule spec. Use when creating, generating, designing, building, or reviewing slides, decks, presentations, one-pagers, briefings, profile cards, comparisons, timelines, status boards, or metric readouts. Outputs self-contained 1280×720 HTML. NO templates — every slide is composed fresh from tokens + primitives, gated by a checklist. This is the anti-Claude deck style — restrained, anchored, never generic AI slop.
+description: Build dense, bounded-cell fact-card slides — institutional, credible, flat, Montserrat on ivory, navy/gray/teal/gold, single-title headers (no subtitles), sparing monochrome Lucide icons — following a STRICT hard-rule spec. Use when creating, generating, designing, building, or reviewing slides, decks, presentations, one-pagers, briefings, profile cards, comparisons, timelines, status boards, or metric readouts. Outputs self-contained 1280×720 HTML. NO templates — every slide is composed fresh from tokens + primitives, gated by a checklist. Decks use the fewest slides possible. This is the anti-Claude deck style — restrained, anchored, never generic AI slop.
 ---
 
 # Anti-claude-slides-skill-1
@@ -97,8 +97,11 @@ above the title, nothing below it; framing/scope info lives in content cells, ne
   that signal).
 - Put each icon **beside the text label it reinforces** (keystrip, chip, band, rail field name, state row,
   flow step) — wayfinding, not decoration.
-- Stay **slight: ≤ 1 icon per labeled region, ≤ 6 per slide**; the same concept gets the same icon
-  deck-wide.
+- **Every content slide carries icons — typically 2–4** (≥ 1 always; ≤ 1 per labeled region, never more
+  than 6); the same concept gets the same icon deck-wide. An iconless content slide fails the gate.
+- **Legible at a glance in the render** — the `.icon` primitive (~1.4em ≈ 17px beside a 12px label) is
+  the floor; if the screenshot shows specks you must hunt for, the icons are too small. Confirm in the
+  render-LOOK step.
 
 **DON'T**
 - **Never on the COVER** — the icon allowance is content-slides-only; the cover carries **zero icons**.
@@ -122,9 +125,13 @@ above the title, nothing below it; framing/scope info lives in content cells, ne
 **DO**
 - Build for **layered reading**: title → bold-only skim → full detail; **label every region.**
 - **One slide, one job;** re-derive labels/fields from this subject.
+- **Fewest slides possible:** the deck is as short as the content allows — every slide must earn its
+  place. Merge jobs that one dense fact-card can carry; split only when one-slide-one-job forces it.
 
 **DON'T**
 - Don't put two subjects/arguments on one slide — **split it.**
+- Don't pad a deck — no agenda, section-divider, quote, recap, or thank-you slides; never two slides
+  with overlapping jobs.
 - Don't reuse a template's demo labels as the schema (**residue test:** if a label only fits the demo's
   topic, replace it). *(Moot here — there are no templates — but the residue test still applies to any
   content you carry over.)*
@@ -176,15 +183,17 @@ The template ships in the **navy-fallback** state; supplying an image is a one-l
 *(Need a **cover**? Start from `assets/cover.html` per **THE COVER** — swap title/date/image, audit with
 §8. The steps below are for **content** slides, composed fresh.)*
 1. **Name the job in one sentence:** "a scanner must walk away knowing ___." One slide, one job. If it
-   answers two questions, it's two slides.
+   answers two questions, it's two slides. **Plan the deck at its minimum:** list the jobs, one slide
+   per distinct job, and merge jobs that one dense fact-card can carry — the right deck is the
+   shortest one that does the work.
 2. **Pick the fact-card arrangement that fits the job** (profile / compare / metrics / status / timeline
    / etc.) — *arrangement*, not a template. It is ALWAYS a bounded-cell fact-card grid (Rule 0 +
    Format & density). Decide the regions: title, label gutters/keystrips, bounded panels, a right rail
    of key→value fields, a source foot. Let content zones flex to fill 1280×720.
 3. **Assemble from `assets/tokens.css` primitives** — inline the file, compose the elements (band, chip,
    panel, rail/field, metric, dot, tag, spine-list, source). Pour in the subject's real content;
-   re-derive every label/field from the subject. Optionally add **a few Lucide icons** beside region
-   labels where they aid wayfinding — within the **Icons** caps (≤ 1 per region, ≤ 6 per slide).
+   re-derive every label/field from the subject. Add **2–4 Lucide icons** beside the region labels they
+   reinforce (see **Icons** — ≤ 1 per region, ≤ 6 per slide, legible in the render).
 4. **Anchor everything** (date / named authority / italic dated title). One quiet `Source:` foot.
 5. **Self-audit — mandatory gate:** run **every** item in `checklist.md`; fix each violation before
    presenting.
