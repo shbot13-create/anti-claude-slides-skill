@@ -14,6 +14,10 @@ tokens file + flat primitives, then gated by an audit checklist. That's the
 ## What it enforces (the short version)
 - **Typography:** Montserrat only; 3–4 sizes (title 30px / body 15px / value 14px / label 12px / source
   11px); light title, bold-weight emphasis (never color), metric numbers ≤ title size and never on a chip.
+- **Header = one title:** a single title element only (it may wrap to a second line) — no subtitle, no
+  definer, no eyebrow kicker; framing/scope info lives in content cells.
+- **Icons:** sparing **monochrome Lucide stroke icons** on content slides only — beside the label they
+  reinforce, ≤ 1 per region and ≤ 6 per slide, colored by their cell's signal; **zero icons on the cover**.
 - **Density:** every slide a dense fact-card grid that fills the frame — no dead space, nothing overflowing 1280×720.
 - **Color = one meaning:** teal `#2F8F86` = active/best/positive only (≤1 per comparison axis); gold
   `#A9853F` = caveat/link/rule/tag only; no red/amber/green.
@@ -64,7 +68,8 @@ The skill builds HTML; to screenshot it, use any headless Chromium:
 
 ## Requirements
 - Claude Code (recent version with plugin support).
-- Internet access for the Montserrat web font (slides reference Google Fonts).
+- Internet access for the Montserrat web font (Google Fonts) and, when slides use icons, the Lucide
+  script (unpkg CDN).
 - Optional: a headless Chromium for screenshots.
 
 ## License

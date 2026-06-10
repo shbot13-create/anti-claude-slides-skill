@@ -42,15 +42,14 @@
 body{display:flex;justify-content:center;background:#cfd4d8;font-family:var(--font)}
 .slide{width:1280px;height:720px;background:var(--ground);color:var(--ink);
   font-family:var(--font);padding:var(--m);display:flex;flex-direction:column;position:relative}
-.eyebrow{font-size:var(--fs-label);font-weight:600;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--gray)}
 .title{font-size:var(--fs-title);font-weight:400;line-height:1.2;color:var(--ink);max-width:1180px}
 
 /* ===== COVER LAYOUT — the one sanctioned exception (see SKILL.md) =====
    Exempt here ONLY: Rule 0 (this is the single reusable template), fact-card density / fill-the-frame,
    the no-photo flatness clause, and the bounded-cell / rail / source-foot structure.
    STILL binding: Montserrat-only · ivory ground (never #FFF) · title navy + light + left + not enlarged
-   · gold used ONLY as the 2px accent rule · square corners · no shadow/gradient/glow on the chrome. */
+   · gold used ONLY as the 2px accent rule · square corners · no shadow/gradient/glow on the chrome
+   · ZERO icons (the icon allowance is content-slides-only — see SKILL.md "Icons"). */
 .slide.cover{padding:0;flex-direction:row;align-items:stretch;overflow:hidden}
 
 .cover-text{flex:0 0 55%;display:flex;flex-direction:column;justify-content:center;

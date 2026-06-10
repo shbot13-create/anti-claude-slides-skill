@@ -3,10 +3,11 @@
 A slide passes only when **every** box holds. Report a failure as: **element → what's wrong → fix**,
 citing the rule. These map 1:1 to the hard rules in `SKILL.md`. No exceptions, no "close enough."
 
-> **Cover slide?** Audit it by **§7 only**. The cover is exempt from §0 (compose-fresh), §2
+> **Cover slide?** Audit it by **§8 only**. The cover is exempt from §0 (compose-fresh), §2
 > (density / fill-frame), the no-photo clause of §4, and the rail / `Source:` / anchor-every-cell items —
 > see SKILL.md **THE COVER**. §1 typography, §3 signal & color, and §4 flatness (square corners, ivory
-> ground, no shadow/gradient/glow) **still apply** to the cover.
+> ground, no shadow/gradient/glow) **still apply** to the cover. §7's icon allowance does **not** extend
+> to the cover — the cover carries **zero icons** (§8 checks it).
 
 ## 0. Compose-fresh (Rule 0)
 - [ ] Slide was **built fresh** from `assets/tokens.css` primitives — not copied from a prior slide.
@@ -17,6 +18,8 @@ citing the rule. These map 1:1 to the hard rules in `SKILL.md`. No exceptions, n
 - [ ] **Montserrat only** — one family; hierarchy from weight + size + color, no 2nd typeface.
 - [ ] Only the **3–4 sizes** in the scale: title 30px · body 15px · value 14px · label 12px · source 11px.
 - [ ] **Title** is light (300–400), navy/ink, sentence/entity case, **not big-and-bold, not centered**.
+- [ ] **Header is ONE title** — a single title element (wrapping to a 2nd line is fine); **no eyebrow
+      above, no subtitle/definer below**; framing/scope info lives in content cells, not the header.
 - [ ] Body 15px/400; **bold spine** is 700 in the SAME ink (emphasis = weight, never color).
 - [ ] Keys/chips/tags 12px/600 UPPERCASE; source 11px/400 **italic** muted.
 - [ ] **Metric number** 600, **navy**, **≤ title size (never above)**, never black, never on a colored chip.
@@ -44,8 +47,9 @@ citing the rule. These map 1:1 to the hard rules in `SKILL.md`. No exceptions, n
 
 ## 4. Flatness
 - [ ] Flat throughout: ivory ground, **square corners**, edges from hairlines/fills only.
-- [ ] **No** shadow / gradient / glow / photo *(content slides; the cover's one photo is §7)* / rounded
-      marketing pill / icon rainbow / 3D.
+- [ ] **No** shadow / gradient / glow / photo *(content slides; the cover's one photo is §8)* / rounded
+      marketing pill / icon rainbow *(sparing monochrome Lucide icons are the ONE sanctioned form — §7)*
+      / 3D.
 - [ ] Ground is `#FAFBFC` — **never pure `#FFFFFF`**.
 - [ ] **No rule/border beneath the title.**
 - [ ] No metric number on a colored chip or above title size (no KPI-dashboard look).
@@ -63,11 +67,23 @@ citing the rule. These map 1:1 to the hard rules in `SKILL.md`. No exceptions, n
 - [ ] **One slide, one job** (not two subjects/arguments — else split it).
 - [ ] Reading order supports random access; the bold spine alone reconstructs the gist.
 
-## 7. Cover slide (apply ONLY to the deck cover — see SKILL.md **THE COVER**)
+## 7. Icons (slight & functional — content slides ONLY; see SKILL.md **Icons**)
+- [ ] **Lucide stroke icons only**, written `<i data-lucide="name" class="icon"></i>` with the Lucide CDN
+      script; every name shows a **rendered glyph** in the screenshot (a bad name renders an empty gap —
+      fix and re-render).
+- [ ] **Monochrome `currentColor`** — each icon wears its cell's text color; teal/gold only when the cell
+      itself carries that signal. No multicolor/filled blobs, no emoji, no second icon set.
+- [ ] Every icon sits **beside the text label it reinforces** — none floats as decoration, none replaces
+      words, none parked in a corner.
+- [ ] **≤ 1 icon per labeled region, ≤ 6 per slide**; same concept = same icon deck-wide; no two icons
+      for one concept.
+
+## 8. Cover slide (apply ONLY to the deck cover — see SKILL.md **THE COVER**)
 - [ ] Started from **`assets/cover.html`**; only the **title, date, and image** slots were changed.
 - [ ] **Title** navy/ink, **light 300**, left-aligned, sentence/entity case, **at title size** — not
       enlarged, centered, or recolored (**no gold title**); **no rule beneath it.**
 - [ ] **Gold appears ONLY as the two 2px frame bars** — nowhere else on the slide.
+- [ ] **Zero icons** anywhere on the cover (the §7 allowance is content-slides-only).
 - [ ] Left text column is ivory `#FAFBFC` (**never pure white**); exactly **one** bounded photo; **square
       corners**; no shadow / gradient / glow.
 - [ ] **Date** is a real, honest date (no TBD / placeholder); **one slide, one job** (deck title only).

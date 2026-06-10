@@ -1,6 +1,6 @@
 ---
 name: Anti-claude-slides-skill-1
-description: Build dense, bounded-cell fact-card slides — institutional, credible, flat, Montserrat on ivory, navy/gray/teal/gold — following a STRICT hard-rule spec. Use when creating, generating, designing, building, or reviewing slides, decks, presentations, one-pagers, briefings, profile cards, comparisons, timelines, status boards, or metric readouts. Outputs self-contained 1280×720 HTML. NO templates — every slide is composed fresh from tokens + primitives, gated by a checklist. This is the anti-Claude deck style — restrained, anchored, never generic AI slop.
+description: Build dense, bounded-cell fact-card slides — institutional, credible, flat, Montserrat on ivory, navy/gray/teal/gold, single-title headers (no subtitles), sparing monochrome Lucide icons — following a STRICT hard-rule spec. Use when creating, generating, designing, building, or reviewing slides, decks, presentations, one-pagers, briefings, profile cards, comparisons, timelines, status boards, or metric readouts. Outputs self-contained 1280×720 HTML. NO templates — every slide is composed fresh from tokens + primitives, gated by a checklist. This is the anti-Claude deck style — restrained, anchored, never generic AI slop.
 ---
 
 # Anti-claude-slides-skill-1
@@ -44,8 +44,10 @@ never a second typeface.
 
 **DO:** keep to these 3–4 sizes; sentence-case by default; Title Case only for proper nouns; ALL-CAPS
 only for labels/tags; italic only for cited titles; acronyms expanded-then-`(PARENTHESIZED)` on first use.
+**The header is ONE title** — the title alone, a single title element (wrapping to a 2nd line is fine).
 **DON'T:** add a 2nd font family, a 4th size, a big-and-bold/centered title, type shadows/outlines/wide
-tracking, or color-for-emphasis (**bold weight does emphasis**).
+tracking, or color-for-emphasis (**bold weight does emphasis**). **No subtitle/definer/eyebrow** — nothing
+above the title, nothing below it; framing/scope info lives in content cells, never in the header.
 
 ## Format & density
 **DO**
@@ -80,9 +82,29 @@ tracking, or color-for-emphasis (**bold weight does emphasis**).
 
 **DON'T**
 - Don't add shadows, gradients, glows, photos (except the deck **cover's** one bounded image — see
-  **THE COVER**), rounded marketing pills, icon rainbows, 3D.
+  **THE COVER**), rounded marketing pills, icon rainbows, 3D. (Sparing **monochrome Lucide icons** are
+  the ONE sanctioned icon form — see **Icons**.)
 - Don't use **pure white `#FFFFFF`**, or **a rule beneath the title**.
 - Don't put a metric number on a colored chip or above title size (that's a KPI dashboard).
+
+## Icons (slight & functional — content slides ONLY)
+**DO**
+- Use **Lucide stroke icons** only — `<i data-lucide="name" class="icon"></i>` plus the Lucide CDN script
+  (`<script src="https://unpkg.com/lucide@latest"></script>` + `lucide.createIcons()` at the end of
+  `<body>`); size via the `.icon` primitive (~1.25em).
+- Keep every icon **monochrome via `currentColor`** — it inherits its cell's text color and so obeys the
+  signal system (gray in a keystrip, white on a navy chip; teal/gold ONLY when the cell itself carries
+  that signal).
+- Put each icon **beside the text label it reinforces** (keystrip, chip, band, rail field name, state row,
+  flow step) — wayfinding, not decoration.
+- Stay **slight: ≤ 1 icon per labeled region, ≤ 6 per slide**; the same concept gets the same icon
+  deck-wide.
+
+**DON'T**
+- **Never on the COVER** — the icon allowance is content-slides-only; the cover carries **zero icons**.
+- Don't float an icon without a label, use an icon to replace words, or park decorative icons in corners.
+- Don't use multicolor/filled icon blobs, emoji, a second icon set, or two different icons for one
+  concept — and never recolor an icon for emphasis (color comes from the cell's signal, not the icon).
 
 ## Credibility & honesty (anchor-or-cut)
 **DO**
@@ -133,6 +155,7 @@ bounded top and bottom by the **gold 2px accent rule**. ~55% text / ~45% image.
 - **Square corners**; no shadow / gradient / glow / rounded card on the chrome.
 - **Date** is one quiet gray label, **honestly anchored** (a real date — no "TBD," no placeholder month).
 - **One slide, one job:** a cover names the deck. No bullets, no agenda, no second subject.
+- **Zero icons.** The icon allowance (see **Icons**) is content-slides-only — no icon anywhere on the cover.
 
 **Image — sourcing process (simple; never auto-fabricate filler):**
 1. **Ask the user for an image.** If they provide one (path or URL), embed it **raw** (no filter),
@@ -144,14 +167,14 @@ bounded top and bottom by the **gold 2px accent rule**. ~55% text / ~45% image.
 
 The template ships in the **navy-fallback** state; supplying an image is a one-line swap — uncomment the
 `<img>` in `.cover-media` and set its `src` (base64-embed it for a self-contained file). The shipped
-`cover-sample.jpg` is just an example you can point that `<img>` at. Audit with **§7** of `checklist.md`
+`cover-sample.jpg` is just an example you can point that `<img>` at. Audit with **§8** of `checklist.md`
 (not §0/§2's density gates).
 
 ---
 
 # MODE A — Generate
 *(Need a **cover**? Start from `assets/cover.html` per **THE COVER** — swap title/date/image, audit with
-§7. The steps below are for **content** slides, composed fresh.)*
+§8. The steps below are for **content** slides, composed fresh.)*
 1. **Name the job in one sentence:** "a scanner must walk away knowing ___." One slide, one job. If it
    answers two questions, it's two slides.
 2. **Pick the fact-card arrangement that fits the job** (profile / compare / metrics / status / timeline
@@ -160,7 +183,8 @@ The template ships in the **navy-fallback** state; supplying an image is a one-l
    of key→value fields, a source foot. Let content zones flex to fill 1280×720.
 3. **Assemble from `assets/tokens.css` primitives** — inline the file, compose the elements (band, chip,
    panel, rail/field, metric, dot, tag, spine-list, source). Pour in the subject's real content;
-   re-derive every label/field from the subject.
+   re-derive every label/field from the subject. Optionally add **a few Lucide icons** beside region
+   labels where they aid wayfinding — within the **Icons** caps (≤ 1 per region, ≤ 6 per slide).
 4. **Anchor everything** (date / named authority / italic dated title). One quiet `Source:` foot.
 5. **Self-audit — mandatory gate:** run **every** item in `checklist.md`; fix each violation before
    presenting.
@@ -191,10 +215,14 @@ platform — use the first that exists (set it as `$CHROME`):
 ```
 Dead-space test (objective): the lowest row with ink should sit near the bottom margin (~row 678/720).
 A large bottom gap = a sparse slide → grow/redistribute content until the frame is filled.
+Icon test: every `data-lucide` name must show a rendered glyph — a bad name renders NOTHING (an empty
+gap beside its label). Fix the name and re-render. (Headless Chrome runs the Lucide script; if the CDN
+was unreachable, re-render with network access before judging.)
 
 # Output contract
-- Self-contained `.html`, exactly **1280×720**, Montserrat via Google Fonts link, `assets/tokens.css`
-  **inlined**. Nothing overflows the frame. One `Source:` foot. Passes `checklist.md` with no exceptions.
+- Self-contained `.html`, exactly **1280×720**, Montserrat via Google Fonts link, icons (if any) via the
+  Lucide CDN script + `lucide.createIcons()` at the end of `<body>`, `assets/tokens.css` **inlined**.
+  Nothing overflows the frame. One `Source:` foot. Passes `checklist.md` with no exceptions.
 - **Source-foot guard (common failure):** `.source` is full-width and pinned to the bottom
   (`margin-top:auto`). Every content column / rail / panel MUST end **above** it — a rail or panel that
   runs to the frame edge will overprint the source band. Cap rail fields / trim padding until the
